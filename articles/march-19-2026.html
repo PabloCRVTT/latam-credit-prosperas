@@ -140,8 +140,6 @@
       align-items: flex-start;
       gap: 16px;
       padding: 22px 24px;
-      cursor: pointer;
-      user-select: none;
     }
 
     .card-icon {
@@ -186,31 +184,11 @@
       line-height: 1.55;
     }
 
-    .card-toggle {
-      flex-shrink: 0;
-      color: var(--primary);
-      font-size: 13px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      padding-top: 4px;
-      white-space: nowrap;
-    }
-
-    .chevron {
-      font-size: 18px;
-      transition: transform 0.25s;
-      display: inline-block;
-    }
-
     .card-body {
-      display: none;
+      display: block;
       padding: 6px 24px 26px 84px;
       border-top: 1px solid var(--border);
     }
-
-    .card-body.open { display: block; }
 
     .card-body p {
       font-size: 14.5px;
@@ -408,14 +386,13 @@
 
   <!-- CARD 1: Structural Opportunity -->
   <div class="section-card">
-    <div class="card-header" onclick="toggle(this)">
+    <div class="card-header">
       <div class="card-icon blue">🏔️</div>
       <div class="card-title-block">
         <div class="card-label">Context</div>
         <div class="card-title">The structural opportunity is still enormous</div>
         <div class="card-summary">178M unbanked people. Over 50% of SMEs have never taken a formal loan. The market Prosperas serves <em>is</em> the market.</div>
       </div>
-      <div class="card-toggle">Read more <span class="chevron">›</span></div>
     </div>
     <div class="card-body">
       <div class="stat-row">
@@ -434,14 +411,13 @@
 
   <!-- CARD 2: Trends -->
   <div class="section-card">
-    <div class="card-header" onclick="toggle(this)">
+    <div class="card-header">
       <div class="card-icon sky">📡</div>
       <div class="card-title-block">
         <div class="card-label">Trends</div>
         <div class="card-title">The 4 forces redefining credit in the region</div>
         <div class="card-summary">AI-powered underwriting, embedded credit, women as the fastest-growing segment, and regulation maturing into a competitive moat.</div>
       </div>
-      <div class="card-toggle">Read more <span class="chevron">›</span></div>
     </div>
     <div class="card-body">
       <div class="application-item">
@@ -465,14 +441,13 @@
 
   <!-- CARD 3: Who is winning -->
   <div class="section-card">
-    <div class="card-header" onclick="toggle(this)">
+    <div class="card-header">
       <div class="card-icon green">🏆</div>
       <div class="card-title-block">
         <div class="card-label">Competitive Landscape</div>
         <div class="card-title">Who is growing the most and why</div>
         <div class="card-summary">Nubank, R2, Plata, Addi. Different models, same lesson: proprietary data assets + distribution where the customer already is.</div>
       </div>
-      <div class="card-toggle">Read more <span class="chevron">›</span></div>
     </div>
     <div class="card-body">
       <div class="players-grid">
@@ -505,14 +480,13 @@
 
   <!-- CARD 4: Applications -->
   <div class="section-card">
-    <div class="card-header" onclick="toggle(this)">
+    <div class="card-header">
       <div class="card-icon rose">🎯</div>
       <div class="card-title-block">
         <div class="card-label">Application</div>
         <div class="card-title">What Prosperas can take from all of this</div>
         <div class="card-summary">Five concrete levers directly derived from what is working in the market today — each maps onto Prosperas' existing strengths.</div>
       </div>
-      <div class="card-toggle">Read more <span class="chevron">›</span></div>
     </div>
     <div class="card-body">
       <div class="application-item">
@@ -564,16 +538,5 @@
   Analysis prepared with Claude · March 2026
 </footer>
 
-<script>
-  function toggle(header) {
-    const body = header.nextElementSibling;
-    const chevron = header.querySelector('.chevron');
-    const toggleNode = header.querySelector('.card-toggle');
-    const isOpen = body.classList.contains('open');
-    body.classList.toggle('open');
-    chevron.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(90deg)';
-    toggleNode.childNodes[0].textContent = isOpen ? 'Read more ' : 'Close ';
-  }
-</script>
 </body>
 </html>
