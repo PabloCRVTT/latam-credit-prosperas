@@ -3,17 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Credit in LatAm — Strategic Analysis for Prosperas</title>
+  <title>Prosperas — Weekly Intelligence</title>
   <style>
     :root {
       --primary: #1967cf;
       --primary-dark: #1250a8;
       --primary-light: #e8f0fd;
-      --primary-mid: #4285f4;
-      --green: #16a34a;
-      --green-light: #dcfce7;
-      --orange: #ea580c;
-      --orange-light: #fff7ed;
       --gray: #6b7280;
       --dark: #1a1a2e;
       --border: #e5e7eb;
@@ -27,13 +22,12 @@
       font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
       background: var(--bg);
       color: var(--dark);
-      line-height: 1.65;
+      line-height: 1.6;
     }
 
-    /* ---- HEADER ---- */
+    /* HEADER */
     header {
       background: linear-gradient(140deg, #0d47a1 0%, #1967cf 55%, #2979e8 100%);
-      color: white;
       padding: 0;
     }
 
@@ -41,48 +35,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 28px 32px 22px;
+      padding: 24px 32px 20px;
       border-bottom: 1px solid rgba(255,255,255,0.15);
-    }
-
-    /* Prosperas wordmark logo */
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
-
-    .logo-mark {
-      width: 36px;
-      height: 36px;
-      background: white;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .logo-mark svg {
-      width: 22px;
-      height: 22px;
-    }
-
-    .logo-text {
-      font-size: 22px;
-      font-weight: 700;
-      color: white;
-      letter-spacing: -0.3px;
-    }
-
-    .logo-text span {
-      color: rgba(255,255,255,0.75);
-      font-weight: 400;
     }
 
     .header-body {
       text-align: center;
-      padding: 44px 32px 50px;
+      padding: 48px 32px 52px;
     }
 
     .header-tag {
@@ -95,483 +54,185 @@
       text-transform: uppercase;
       padding: 5px 14px;
       border-radius: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     header h1 {
-      font-size: 34px;
+      font-size: 30px;
       font-weight: 700;
-      margin-bottom: 12px;
-      letter-spacing: -0.5px;
-      line-height: 1.25;
+      color: white;
+      margin-bottom: 10px;
+      letter-spacing: -0.3px;
     }
 
     header p {
-      font-size: 16px;
-      color: rgba(255,255,255,0.65);
-      max-width: 500px;
+      font-size: 15px;
+      color: rgba(255,255,255,0.62);
+      max-width: 420px;
       margin: 0 auto;
     }
 
-    /* ---- LAYOUT ---- */
+    /* MAIN */
     .container {
-      max-width: 820px;
+      max-width: 780px;
       margin: 0 auto;
-      padding: 36px 20px 72px;
+      padding: 40px 20px 80px;
     }
 
-    /* ---- CARDS ---- */
-    .section-card {
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ARTICLE CARDS */
+    .article-card {
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: 14px;
-      margin-bottom: 18px;
-      overflow: hidden;
-      transition: box-shadow 0.2s, border-color 0.2s;
+      padding: 24px 26px;
+      margin-bottom: 16px;
+      text-decoration: none;
+      display: block;
+      transition: box-shadow 0.2s, border-color 0.2s, transform 0.15s;
     }
 
-    .section-card:hover {
-      box-shadow: 0 4px 24px rgba(25,103,207,0.12);
-      border-color: #c7d9f7;
+    .article-card:hover {
+      box-shadow: 0 6px 28px rgba(25,103,207,0.13);
+      border-color: #c2d4f5;
+      transform: translateY(-2px);
     }
 
-    .card-header {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      padding: 22px 24px;
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .card-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
+    .article-meta {
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      flex-shrink: 0;
-      margin-top: 2px;
+      gap: 10px;
+      margin-bottom: 10px;
     }
 
-    .card-icon.blue   { background: var(--primary-light); }
-    .card-icon.green  { background: var(--green-light); }
-    .card-icon.orange { background: var(--orange-light); }
-    .card-icon.sky    { background: #e0f2fe; }
-    .card-icon.rose   { background: #fff1f2; }
-
-    .card-title-block { flex: 1; }
-
-    .card-label {
+    .article-tag {
       font-size: 11px;
       font-weight: 600;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
       text-transform: uppercase;
-      color: var(--gray);
-      margin-bottom: 4px;
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 3px 10px;
+      border-radius: 20px;
     }
 
-    .card-title {
-      font-size: 17px;
+    .article-date {
+      font-size: 12px;
+      color: var(--gray);
+    }
+
+    .article-title {
+      font-size: 18px;
       font-weight: 700;
       color: var(--dark);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+      line-height: 1.3;
     }
 
-    .card-summary {
+    .article-summary {
       font-size: 14px;
       color: var(--gray);
-      line-height: 1.55;
+      line-height: 1.6;
+      margin-bottom: 14px;
     }
 
-    .card-toggle {
-      flex-shrink: 0;
-      color: var(--primary);
+    .article-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .article-topics {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .topic-chip {
+      font-size: 11px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--gray);
+      padding: 3px 9px;
+      border-radius: 20px;
+    }
+
+    .read-link {
       font-size: 13px;
       font-weight: 600;
+      color: var(--primary);
       display: flex;
       align-items: center;
       gap: 4px;
-      padding-top: 4px;
       white-space: nowrap;
     }
 
-    .chevron {
-      font-size: 18px;
-      transition: transform 0.25s;
-      display: inline-block;
-    }
-
-    .card-body {
-      display: none;
-      padding: 6px 24px 26px 84px;
-      border-top: 1px solid var(--border);
-    }
-
-    .card-body.open { display: block; }
-
-    .card-body p {
-      font-size: 14.5px;
-      color: #374151;
-      margin-top: 16px;
-      line-height: 1.72;
-    }
-
-    .card-body strong { color: var(--dark); }
-
-    /* ---- STAT PILLS ---- */
-    .stat-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .stat-pill {
-      background: var(--bg);
-      border: 1px solid #d1e3fb;
-      border-radius: 10px;
-      padding: 11px 16px;
-    }
-
-    .stat-pill .num {
-      font-size: 22px;
-      font-weight: 800;
-      color: var(--primary);
-      display: block;
-      line-height: 1.2;
-    }
-
-    .stat-pill .lbl {
-      color: var(--gray);
-      font-size: 12px;
-    }
-
-    /* ---- HIGHLIGHT BOXES ---- */
-    .highlight-box {
-      background: var(--primary-light);
-      border-left: 3px solid var(--primary);
-      padding: 13px 16px;
-      border-radius: 0 8px 8px 0;
-      margin-top: 18px;
-      font-size: 14px;
-      color: #1250a8;
-      line-height: 1.6;
-    }
-
-    .highlight-box.green {
-      background: var(--green-light);
-      border-color: var(--green);
-      color: #166534;
-    }
-
-    .highlight-box.orange {
-      background: var(--orange-light);
-      border-color: var(--orange);
-      color: #9a3412;
-    }
-
-    /* ---- PLAYERS GRID ---- */
-    .players-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .player-card {
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 15px;
-    }
-
-    .player-name {
-      font-weight: 700;
-      font-size: 14.5px;
-      color: var(--dark);
-      margin-bottom: 4px;
-    }
-
-    .player-metric {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--green);
-      margin-bottom: 7px;
-    }
-
-    .player-why {
-      font-size: 13px;
-      color: var(--gray);
-      line-height: 1.55;
-    }
-
-    /* ---- APPLICATION ITEMS ---- */
-    .application-item {
-      border-left: 3px solid var(--primary);
-      padding-left: 15px;
-      margin-top: 18px;
-    }
-
-    .application-item .app-title {
-      font-weight: 700;
-      font-size: 14.5px;
-      color: var(--dark);
-      margin-bottom: 5px;
-    }
-
-    .application-item p { margin-top: 0; }
-
-    /* ---- SOURCES ---- */
-    .sources {
-      margin-top: 32px;
-      padding: 20px 24px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-    }
-
-    .sources h3 {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--gray);
-      margin-bottom: 12px;
-    }
-
-    .sources a {
-      display: inline-block;
-      font-size: 13px;
-      color: var(--primary);
-      text-decoration: none;
-      margin-right: 16px;
-      margin-bottom: 7px;
-      line-height: 1.5;
-    }
-
-    .sources a:hover { text-decoration: underline; }
-
-    /* ---- FOOTER ---- */
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 28px;
       font-size: 12px;
       color: var(--gray);
-      margin-top: 4px;
+      border-top: 1px solid var(--border);
     }
 
-    footer .footer-logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin-bottom: 8px;
-    }
-
-    footer .footer-logo span {
-      font-weight: 700;
-      color: var(--primary);
-      font-size: 15px;
-    }
-
-    @media (max-width: 600px) {
-      header h1 { font-size: 24px; }
-      .players-grid { grid-template-columns: 1fr; }
-      .card-body { padding-left: 24px; }
-      .stat-pill .num { font-size: 18px; }
-    }
+    footer img { vertical-align: middle; margin-right: 6px; opacity: 0.6; }
   </style>
 </head>
 <body>
 
 <header>
-  <!-- Logo bar -->
   <div class="header-top">
-    <div class="logo">
-      <img src="https://prosperas.com/wp-content/uploads/2026/01/Prosperas-Logo-blanco-e1767895453172.png" alt="Prosperas" style="height:36px; width:auto;" />
-    </div>
+    <img src="https://prosperas.com/wp-content/uploads/2026/01/Prosperas-Logo-blanco-e1767895453172.png"
+         alt="Prosperas" style="height:34px; width:auto;" />
   </div>
-
-  <!-- Title block -->
   <div class="header-body">
-    <div class="header-tag">Strategic Analysis · March 2026</div>
-    <h1>Credit in LatAm<br>What It Means for Prosperas</h1>
-    <p>Current state, key trends, who is winning and why — and what Prosperas can take from it.</p>
+    <div class="header-tag">Intelligence Hub</div>
+    <h1>Weekly Market Intelligence</h1>
+    <p>Curated analysis on credit, fintech, and financial inclusion in Latin America.</p>
   </div>
 </header>
 
 <div class="container">
 
-  <!-- CARD 1: Structural Opportunity -->
-  <div class="section-card">
-    <div class="card-header" onclick="toggle(this)">
-      <div class="card-icon blue">🏔️</div>
-      <div class="card-title-block">
-        <div class="card-label">Context</div>
-        <div class="card-title">The structural opportunity is still enormous</div>
-        <div class="card-summary">178M unbanked people. Over 50% of SMEs have never taken a formal loan. The market Prosperas serves <em>is</em> the market.</div>
-      </div>
-      <div class="card-toggle">Read more <span class="chevron">›</span></div>
-    </div>
-    <div class="card-body">
-      <div class="stat-row">
-        <div class="stat-pill"><span class="num">178M</span><span class="lbl">unbanked people in LatAm</span></div>
-        <div class="stat-pill"><span class="num">70%</span><span class="lbl">unbanked or underbanked</span></div>
-        <div class="stat-pill"><span class="num">+50%</span><span class="lbl">of SMEs without formal credit</span></div>
-        <div class="stat-pill"><span class="num">$50B</span><span class="lbl">LatAm fintech market by 2033</span></div>
-      </div>
-      <p>The LatAm fintech market reached $13.1B in 2024 and is projected to grow to $49.6B by 2033 (15.9% CAGR). Credit is the second-largest fintech segment after payments, representing ~19% of total activity. This is no longer a speculative bet — capital is flowing at scale because the data confirms it works.</p>
-      <p>The SME credit gap was valued at $509B in 2023 and is projected to reach $923B by 2026. In Mexico alone, credit fintechs granted over $3B in loans in 2023, benefiting more than 5 million users. The gap is real, large, and being captured by those who move fastest.</p>
-      <div class="highlight-box">
-        <strong>Direct relevance for Prosperas:</strong> The segment it serves — women entrepreneurs without formal credit history — is exactly where the gap is largest and where the historical performance of microfinance has shown that actual risk is far lower than perceived risk.
-      </div>
-    </div>
-  </div>
+  <div class="section-label">Latest Editions</div>
 
-  <!-- CARD 2: Trends -->
-  <div class="section-card">
-    <div class="card-header" onclick="toggle(this)">
-      <div class="card-icon sky">📡</div>
-      <div class="card-title-block">
-        <div class="card-label">Trends</div>
-        <div class="card-title">The 4 forces redefining credit in the region</div>
-        <div class="card-summary">AI-powered underwriting, embedded credit, women as the fastest-growing segment, and regulation maturing into a competitive moat.</div>
-      </div>
-      <div class="card-toggle">Read more <span class="chevron">›</span></div>
+  <!-- ARTICLE 1 -->
+  <a class="article-card" href="articles/march-19-2026.html">
+    <div class="article-meta">
+      <span class="article-tag">Credit · LatAm</span>
+      <span class="article-date">March 19, 2026</span>
     </div>
-    <div class="card-body">
-      <div class="application-item">
-        <div class="app-title">1. AI is rewriting underwriting</div>
-        <p>Credit models that previously took 9–12 months to build are now deployed in 3. Leading companies use behavioral data, transaction patterns, and geolocation instead of — or in addition to — bureau scores. Nubank holds a 4.4% NPL rate vs. the 5.5% Brazilian banking sector average, while serving customers that were previously considered unbankable. AI isn't just cutting costs — it's enabling better credit decisions on populations with no formal history.</p>
+    <div class="article-title">The State of Credit in LatAm — What It Means for Prosperas</div>
+    <div class="article-summary">Current landscape, key trends reshaping underwriting, who is growing the fastest and why — and five concrete levers Prosperas can pull from the market's leading players.</div>
+    <div class="article-footer">
+      <div class="article-topics">
+        <span class="topic-chip">Nubank</span>
+        <span class="topic-chip">Embedded Credit</span>
+        <span class="topic-chip">Women's Segment</span>
+        <span class="topic-chip">AI Underwriting</span>
       </div>
-      <div class="application-item">
-        <div class="app-title">2. Embedded credit is winning on distribution</div>
-        <p>R2, one of the fastest-growing lenders in Mexico and Colombia, doesn't acquire customers directly. It embeds credit into platforms like UberEats, Rappi, and PayU — where the merchant's cash flow is already observable. The embedded finance market in Mexico alone is projected to exceed $22B by 2030. Credit should flow to where the customer already is — not wait for the customer to come to credit.</p>
-      </div>
-      <div class="application-item">
-        <div class="app-title">3. Women are the fastest-growing credit segment in Mexico</div>
-        <p>Fintechs reduced the gender gap in credit access from 8.8% to 2.6% between 2023 and 2025. Women now represent 43% of first-time credit recipients and hold 51% of active credits. This is not an impact narrative — it's a high-performing segment that traditional banks systematically underserved and that fintechs are now capturing at scale.</p>
-      </div>
-      <div class="application-item">
-        <div class="app-title">4. Regulation is maturing into a competitive moat</div>
-        <p>Brazil leads with Open Finance; Mexico, Colombia, and Peru are following. Companies that build regulatory capacity early turn it into a barrier to entry. Investors in 2026 are prioritizing "intelligent growth" — profitability, operational efficiency, and regulatory readiness — over raw user acquisition. Fintech now accounts for 61% of total VC investment in the region.</p>
-      </div>
+      <span class="read-link">Read more →</span>
     </div>
-  </div>
+  </a>
 
-  <!-- CARD 3: Who is winning -->
-  <div class="section-card">
-    <div class="card-header" onclick="toggle(this)">
-      <div class="card-icon green">🏆</div>
-      <div class="card-title-block">
-        <div class="card-label">Competitive Landscape</div>
-        <div class="card-title">Who is growing the most and why</div>
-        <div class="card-summary">Nubank, R2, Plata, Addi. Different models, same lesson: proprietary data assets + distribution where the customer already is.</div>
-      </div>
-      <div class="card-toggle">Read more <span class="chevron">›</span></div>
-    </div>
-    <div class="card-body">
-      <div class="players-grid">
-        <div class="player-card">
-          <div class="player-name">Nubank</div>
-          <div class="player-metric">↑615% secured portfolio YoY (2024) · 123M customers</div>
-          <div class="player-why">Speed of model iteration. 123M customers = an unmatched data flywheel. NPL below the banking sector average while serving previously excluded populations. Full banking license in Mexico expected in 2026.</div>
-        </div>
-        <div class="player-card">
-          <div class="player-name">R2</div>
-          <div class="player-metric">$100M credit line · Backed by Ant International</div>
-          <div class="player-why">Credit embedded in platforms with observable cash flows. No direct customer acquisition — it integrates into where merchants already transact. Ant International's backing validates the model internationally.</div>
-        </div>
-        <div class="player-card">
-          <div class="player-name">Plata</div>
-          <div class="player-metric">$160M Series A · $1.5B unicorn valuation (2025)</div>
-          <div class="player-why">Product experience + instant approval for segments that traditional banks rejected. Reached unicorn status almost immediately after Series A, focused on consumer credit and BNPL in Mexico.</div>
-        </div>
-        <div class="player-card">
-          <div class="player-name">Addi / Kueski</div>
-          <div class="player-metric">BNPL: $14.9B (2025) → $43B by 2031</div>
-          <div class="player-why">Verticalization by retail category. They go deep into specific sectors until they become the default payment method within them. Colombia now has 115 active lending fintechs — lending is its largest fintech segment.</div>
-        </div>
-      </div>
-      <div class="highlight-box green">
-        <strong>The common pattern across all winners:</strong> they build proprietary data assets from their own customer interactions and iterate continuously. None depend exclusively on bureau scores — and all outperform incumbents on credit quality.
-      </div>
-    </div>
-  </div>
-
-  <!-- CARD 4: Applications -->
-  <div class="section-card">
-    <div class="card-header" onclick="toggle(this)">
-      <div class="card-icon rose">🎯</div>
-      <div class="card-title-block">
-        <div class="card-label">Application</div>
-        <div class="card-title">What Prosperas can take from all of this</div>
-        <div class="card-summary">Five concrete levers directly derived from what is working in the market today — each maps onto Prosperas' existing strengths.</div>
-      </div>
-      <div class="card-toggle">Read more <span class="chevron">›</span></div>
-    </div>
-    <div class="card-body">
-      <div class="application-item">
-        <div class="app-title">1. First-party data is the most valuable asset — build the flywheel deliberately</div>
-        <p>Prosperas' model of consumer-consented, non-traditional first-party data is exactly the asset Nubank has built at 123M-customer scale. Every 16-week cycle, every repayment, every group dynamic is a data point that can sharpen the next underwriting decision. The priority is to build this feedback loop explicitly — not leave it as a byproduct. This is what separates lenders that compound in quality from those that plateau.</p>
-      </div>
-      <div class="application-item">
-        <div class="app-title">2. Expand distribution through partnerships, not just direct acquisition</div>
-        <p>R2 proved you don't need to be the first touchpoint. Prosperas can explore embedding credit access through platforms that already serve women entrepreneurs — marketplaces, supply chains, cooperative networks, digital commerce tools. The customer should encounter credit where she already transacts, not have to seek it out separately.</p>
-      </div>
-      <div class="application-item">
-        <div class="app-title">3. The women's segment has stopped being a niche — capitalize now</div>
-        <p>The reduction of the gender credit gap from 8.8% to 2.6% in Mexico in three years means the market is being repriced around a segment Prosperas has served since before it was fashionable. That's a durable advantage — data, brand trust, and methodology — but only if it's leveraged before better-funded players arrive. The window to establish defensible leadership is now.</p>
-      </div>
-      <div class="application-item">
-        <div class="app-title">4. Evolve the 16-week cycle toward progressive credit limits</div>
-        <p>The installment discipline that makes BNPL sticky is built into Prosperas' group lending model — plus social accountability that BNPL doesn't have. The question worth testing: can cycles shorten, personalize, or tier for customers with proven history? Nubank systematically raises credit limits as behavioral data accumulates. The same logic applied to group lending could unlock significantly higher LTV per borrower without adding underwriting risk.</p>
-      </div>
-      <div class="application-item">
-        <div class="app-title">5. Build infrastructure for Open Finance before it's mandatory</div>
-        <p>The convergence of Open Finance frameworks across Mexico, Colombia, and the broader region will eventually allow credit histories to port across institutions and enable richer consumer data usage. Building the infrastructure to connect to these frameworks early creates a moat that informal lenders and late-moving incumbents cannot quickly replicate.</p>
-      </div>
-      <div class="highlight-box orange">
-        <strong>The market is validating everything Prosperas does.</strong> The next phase is acceleration: faster model iteration, broader distribution via partnerships, and treating every credit cycle as a compounding data asset — not just a transaction.
-      </div>
-    </div>
-  </div>
-
-  <!-- SOURCES -->
-  <div class="sources">
-    <h3>Sources</h3>
-    <a href="https://www.qedinvestors.com/blog/top-10-trends-for-latam-fintech-in-2025" target="_blank">QED Investors — Top 10 LatAm Fintech Trends 2025</a>
-    <a href="https://international.nubank.com.br/company/nubank-expands-credit-offering-through-portfolio-diversification/" target="_blank">Nubank IR — Credit Portfolio Expansion</a>
-    <a href="https://r2.co/blog/embedded-credit-in-action-empowering-tech-platforms-to-unlock-smb-potential-in-latam" target="_blank">R2 — Embedded Credit for SMEs in LatAm</a>
-    <a href="https://mobiletime.la/noticias/06/03/2026/fintech-brecha-de-genero-credito/" target="_blank">MobileTime LA — Gender Gap in Credit</a>
-    <a href="https://www.phoenixstrategy.group/blog/latin-america-fintech-investment-trends-2025" target="_blank">Phoenix Strategy Group — LatAm Fintech Investment 2025</a>
-    <a href="https://www.globenewswire.com/news-release/2026/01/20/3221587/28124/en/Latin-America-Buy-Now-Pay-Later-Business-Report-2026-2031-BNPL-Expands-Beyond-E-commerce-Into-In-store-and-Omnichannel-Financing.html" target="_blank">GlobeNewswire — LatAm BNPL Report 2026–2031</a>
-    <a href="https://www.mitraxcapital.com/en/blog/panorama-del-fintech-lending-en-latam-crecimiento-y-oportunidades/" target="_blank">Mitrax Capital — Fintech Lending in LatAm</a>
-    <a href="https://gfmag.com/technology/latin-america-fintech-unbanked/" target="_blank">Global Finance — LatAm Stepping Up for the Unbanked</a>
-    <a href="https://prosperas.com/plataforma/" target="_blank">Prosperas — Platform</a>
-  </div>
+  <!-- Future articles will be added here -->
 
 </div>
 
 <footer>
-  <div class="footer-logo">
-    <img src="https://prosperas.com/wp-content/uploads/2026/01/Prosperas-Logo-blanco-e1767895453172.png" alt="Prosperas" style="height:22px; width:auto; filter: brightness(0) saturate(100%) invert(35%) sepia(90%) saturate(500%) hue-rotate(195deg) brightness(90%);" />
-  </div>
-  Analysis prepared with Claude · March 2026
+  Analysis prepared with Claude · Prosperas Intelligence Hub
 </footer>
 
-<script>
-  function toggle(header) {
-    const body = header.nextElementSibling;
-    const chevron = header.querySelector('.chevron');
-    const toggleNode = header.querySelector('.card-toggle');
-    const isOpen = body.classList.contains('open');
-    body.classList.toggle('open');
-    chevron.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(90deg)';
-    toggleNode.childNodes[0].textContent = isOpen ? 'Read more ' : 'Close ';
-  }
-</script>
 </body>
 </html>
