@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Women, Wages & Fintech: LatAm's Credit Revolution Reaches New Heights — Prosperas Intelligence</title>
+  <style>
+    :root {
+      --primary: #1967cf;
+      --primary-dark: #1250a8;
+      --primary-light: #e8f0fd;
+      --green: #16a34a;
+      --green-light: #dcfce7;
+      --orange: #ea580c;
+      --orange-light: #fff7ed;
+      --gray: #6b7280;
+      --dark: #1a1a2e;
+      --border: #e5e7eb;
+      --bg: #f8faff;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--dark); line-height: 1.65; }
+    header { background: linear-gradient(140deg, #0d47a1 0%, #1967cf 55%, #2979e8 100%); }
+    .header-top { display: flex; justify-content: space-between; align-items: center; padding: 24px 32px 20px; border-bottom: 1px solid rgba(255,255,255,0.15); }
+    .header-top a { color: rgba(255,255,255,0.7); font-size: 13px; font-weight: 600; text-decoration: none; }
+    .header-body { text-align: center; padding: 44px 32px 50px; }
+    .header-tag { display: inline-block; background: rgba(255,255,255,0.18); color: rgba(255,255,255,0.9); font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 18px; }
+    header h1 { font-size: 30px; font-weight: 700; color: white; margin-bottom: 10px; letter-spacing: -0.3px; line-height: 1.25; }
+    header p { font-size: 15px; color: rgba(255,255,255,0.62); max-width: 500px; margin: 0 auto; }
+    .container { max-width: 820px; margin: 0 auto; padding: 36px 20px 72px; }
+    .section-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; margin-bottom: 18px; overflow: hidden; }
+    .card-header { display: flex; align-items: flex-start; gap: 16px; padding: 22px 24px; }
+    .card-icon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+    .card-icon.blue { background: var(--primary-light); }
+    .card-icon.green { background: var(--green-light); }
+    .card-icon.orange { background: var(--orange-light); }
+    .card-icon.sky { background: #e0f2fe; }
+    .card-icon.rose { background: #fff1f2; }
+    .card-icon.purple { background: #f3e8ff; }
+    .card-title-block { flex: 1; }
+    .card-label { font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--gray); margin-bottom: 4px; }
+    .card-title { font-size: 17px; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
+    .card-summary { font-size: 14px; color: var(--gray); line-height: 1.55; }
+    .card-body { display: block; padding: 6px 24px 26px 84px; border-top: 1px solid var(--border); }
+    .card-body p { font-size: 14.5px; color: #374151; margin-top: 16px; line-height: 1.72; }
+    .card-body strong { color: var(--dark); }
+    .highlight-box { background: var(--primary-light); border-left: 3px solid var(--primary); padding: 13px 16px; border-radius: 0 8px 8px 0; margin-top: 18px; font-size: 14px; color: #1250a8; line-height: 1.6; }
+    .highlight-box.green { background: var(--green-light); border-color: var(--green); color: #166534; }
+    .highlight-box.orange { background: var(--orange-light); border-color: var(--orange); color: #9a3412; }
+    .stat-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .stat-pill { background: var(--bg); border: 1px solid #d1e3fb; border-radius: 10px; padding: 11px 16px; }
+    .stat-pill .num { font-size: 22px; font-weight: 800; color: var(--primary); display: block; line-height: 1.2; }
+    .stat-pill .lbl { color: var(--gray); font-size: 12px; }
+    .players-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px; }
+    .player-card { border: 1px solid var(--border); border-radius: 10px; padding: 15px; }
+    .player-name { font-weight: 700; font-size: 14.5px; color: var(--dark); margin-bottom: 4px; }
+    .player-metric { font-size: 12px; font-weight: 600; color: var(--green); margin-bottom: 7px; }
+    .player-why { font-size: 13px; color: var(--gray); line-height: 1.55; }
+    .application-item { border-left: 3px solid var(--primary); padding-left: 15px; margin-top: 18px; }
+    .application-item .app-title { font-weight: 700; font-size: 14.5px; color: var(--dark); margin-bottom: 5px; }
+    .application-item p { margin-top: 0; }
+    .sources { margin-top: 32px; padding: 20px 24px; background: var(--white); border: 1px solid var(--border); border-radius: 14px; }
+    .sources h3 { font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--gray); margin-bottom: 12px; }
+    .sources a { display: inline-block; font-size: 13px; color: var(--primary); text-decoration: none; margin-right: 16px; margin-bottom: 7px; }
+    footer { text-align: center; padding: 28px; font-size: 12px; color: var(--gray); margin-top: 4px; }
+    @media (max-width: 600px) { header h1 { font-size: 22px; } .card-body { padding-left: 24px; } .players-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <a href="../index.html">← All editions</a>
+    <img src="https://prosperas.com/wp-content/uploads/2026/01/Prosperas-Logo-blanco-e1767895453172.png" alt="Prosperas" style="height:34px;width:auto;" />
+    <div style="width:90px;"></div>
+  </div>
+  <div class="header-body">
+    <div class="header-tag">Weekly Intelligence · March 2026</div>
+    <h1>Women, Wages & Fintech: LatAm's Credit Revolution Reaches New Heights</h1>
+    <p>Gender parity in lending, BNPL expansion, and Open Finance adoption reshape regional financial inclusion.</p>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="section-card">
+    <div class="card-header">
+      <div class="card-icon rose">👩‍💼</div>
+      <div class="card-title-block">
+        <div class="card-label">Financial Inclusion · Mexico</div>
+        <div class="card-title">Mexican Fintechs Close Gender Credit Gap to Historic Low</div>
+        <div class="card-summary">Digital lenders in Mexico have reduced the gender gap in credit access from 8.8% to just 2.6% in three years, fundamentally reshaping financial inclusion outcomes.</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p><strong>The breakthrough:</strong> Between January 2023 and September 2025, Mexican fintech platforms narrowed the gender credit gap by 6.2 percentage points—a shift that traditional banking failed to achieve over decades. This dramatic improvement reflects fintech's algorithmic approach to credit scoring, which bypasses historical biases embedded in legacy underwriting models and relies instead on alternative data sources such as digital transaction history, utility payments, and behavioral metrics.</p>
+      <p>The data comes from the FinTech México Insights 2026 study, which tracks over 795 active fintech companies, with roughly half focused on payments and lending. Women entrepreneurs and wage earners now access short-term and SME credit at near-parity with men, unlocking capital for small businesses, household investments, and economic resilience. This progress aligns with Mexico's push toward financial inclusion through regulatory clarity and sandbox frameworks that encourage responsible innovation.</p>
+      <div class="highlight-box green">
+        <strong>Relevance for Prosperas:</strong> Demonstrating gender parity in credit outcomes is a key competitive differentiator for credit platforms. This metric validates fintech's role in dismantling structural financial barriers and supports messaging around inclusive growth and responsible lending aligned with ESG goals.
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="card-header">
+      <div class="card-icon orange">💳</div>
+      <div class="card-title-block">
+        <div class="card-label">BNPL & Lending · LatAm</div>
+        <div class="card-title">BNPL Market Surges 24.8% as Merchants Go Omnichannel</div>
+        <div class="card-summary">Latin America's buy-now-pay-later sector is projected to reach $18.5 billion in 2026, driven by expansion beyond e-commerce into physical retail and omnichannel checkout.</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p><strong>Scale and momentum:</strong> The LatAm BNPL market is experiencing explosive growth, with Addi, Kueski Pay, OpenPay, Wipei, and other players aggressively expanding merchant coverage. Kueski recently appointed Pablo Baragiola—a fraud and risk expert from Nubank and Capital One—as Vice President of Fraud, signaling deepened focus on risk management and scalability as transaction volumes spike. The expansion into physical retail and omnichannel checkout represents a critical inflection point: BNPL is no longer confined to mobile-first e-commerce but is becoming a mainstream payment option at point-of-sale terminals and traditional retailers.</p>
+      <p>This diversification reduces platform dependence on online merchant cohorts and taps underserved demographics who prefer in-person shopping. Merchants benefit from payment flexibility features that reduce cart abandonment, while consumers access instant credit without credit cards or formal income documentation. The 24.8% projected growth through 2031 positions BNPL as a cornerstone of LatAm's consumer lending ecosystem.</p>
+      <div class="highlight-box orange">
+        <strong>Relevance for Prosperas:</strong> BNPL's transition to omnichannel is unlocking a new category of merchants and consumer segments. Credit intelligence platforms must adapt to track BNPL performance, default patterns, and merchant velocity across channels to serve the next wave of lenders and risk managers in the region.
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="card-header">
+      <div class="card-icon blue">🏦</div>
+      <div class="card-title-block">
+        <div class="card-label">Regulation & Open Finance · Brazil & Mexico</div>
+        <div class="card-title">Open Finance Revolutionizes Credit Decisioning Across LatAm</div>
+        <div class="card-summary">Open Finance frameworks in Brazil, Mexico, and Colombia are enabling real-time access to multi-source customer data, improving risk assessment for underserved populations and displacing legacy underwriting methods.</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p><strong>Regulatory convergence:</strong> Open Finance initiatives are accelerating across the region, with Brazil's PIX infrastructure reaching 90% adoption and providing real-time payment data as a credit proxy. Mexico's regulatory roadmap is expected to formalize Open Finance standards by mid-2026, following Colombia's progressive implementation. These frameworks allow fintechs and traditional lenders to access customer transaction histories, savings patterns, and utility payment records—with explicit consent—to build more accurate risk profiles in seconds rather than days.</p>
+      <p>The impact is transformative: workers without formal credit history, small merchants, and self-employed populations now gain access to credit based on actual cash flow and behavioral data, rather than employment status or asset ownership. Regulatory bodies in Mexico held seminars in March 2026 focused on development banks' innovation policies and SME financial inclusion, signaling institutional commitment. This shift undermines traditional exclusionary gatekeeping and creates competitive pressure on legacy banks to adopt data-driven credit models or lose market share to faster fintech competitors.</p>
+      <div class="highlight-box green">
+        <strong>Relevance for Prosperas:</strong> Open Finance is fundamental to Prosperas' intelligence value proposition. Data standardization and real-time customer insights reduce information asymmetry and create opportunities for risk analytics, compliance monitoring, and merchant credit assessment tools that leverage standardized data feeds.
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="card-header">
+      <div class="card-icon sky">📊</div>
+      <div class="card-title-block">
+        <div class="card-label">Market Outlook · LatAm</div>
+        <div class="card-title">Fintech Funding Rebounds: Credit & AI Set to Lead 2026 VC Cycle</div>
+        <div class="card-summary">Late-stage fintech funding surged in 2025, with AI-powered credit decisioning and infrastructure platforms emerging as investor favorites for 2026 despite margin compression from rising rates.</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p><strong>Capital allocation shift:</strong> After a volatile 2024, fintech funding returned to growth in 2025, with late-stage deals and larger rounds capturing institutional capital. Investors are now prioritizing B2B credit infrastructure, AI-driven risk management, and cross-border payment systems for the 2026 cycle. In Brazil, rising Selic rates (14.75% as of March 2026) have compressed margins for deposit-dependent fintechs, driving a shift toward higher-margin lending products and software solutions that enhance origination and servicing efficiency.</p>
+      <p>This reallocation creates tailwinds for companies solving credit decisioning, fraud prevention, and compliance automation—precisely the capabilities that Prosperas tracks and analyzes. The Latin American fintech market is projected to expand from $15.2 billion (2025) to $54.0 billion by 2034, a 15.11% CAGR. Growth is anchored in payments, remittances, lending, and digital wallets serving underserved populations, positioning credit and financial inclusion as secular tailwinds regardless of macroeconomic cycles.</p>
+      <div class="highlight-box">
+        <strong>Relevance for Prosperas:</strong> Fintech profitability and capital efficiency are becoming central to investor theses. Credit intelligence platforms that can benchmark lending metrics, quantify default risk by customer segment, and track regulatory compliance are increasingly valuable to fund managers and CFOs evaluating portfolio health.
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="card-header">
+      <div class="card-icon purple">🚀</div>
+      <div class="card-title-block">
+        <div class="card-label">Digital Banking · Brazil & Mexico</div>
+        <div class="card-title">Nubank & Peers Chase Banking Licenses to Unlock Credit Scale</div>
+        <div class="card-summary">Nubank is pursuing a full banking license in Brazil and has been granted one in Mexico, signaling a strategic pivot from fintech-as-service to deposit-taking retail bank with proprietary credit origination.</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p><strong>The charter advantage:</strong> Nubank's pursuit of a banking license in Brazil—where it operates the largest digital bank franchise with 70+ million customers—unlocks lower-cost deposits and higher leverage for proprietary lending. Mexico, where Nubank has already secured its banking license, positions the company to originate mortgages, auto loans, and credit lines at scale without relying on correspondent banking or wholesale funding. This shift mirrors traditional banking dynamics but with digital-native operating models and AI-driven credit decisioning.</p>
+      <p>For competitors, the competitive pressure is acute: established neobanks must choose between raising capital for deposit-taking infrastructure or remaining reliant on bank partnerships and software licensing fees. Nubank's AI-first approach (as recently emphasized in public statements) combines transaction data with alternative credit metrics to improve approval rates and lower defaults. This advantage compounds as deposit bases grow and proprietary credit portfolios generate interest margin expansion and cross-sell opportunities.</p>
+      <div class="highlight-box orange">
+        <strong>Relevance for Prosperas:</strong> The shift toward banking charters reshapes the competitive landscape. Credit intelligence tools must now monitor balance sheet metrics (deposits, loan-loss reserves, capital ratios) alongside fintech-specific KPIs (engagement, take rates, merchant GMV) to provide comprehensive views of market players' financial health and strategic positioning.
+      </div>
+    </div>
+  </div>
+
+  <div class="sources">
+    <h3>Sources</h3>
+    <a href="https://mobiletime.la/noticias/06/03/2026/fintech-brecha-de-genero-credito/" target="_blank">MobileTime — Fintech en México reducen brecha de género en crédito de 8,8% a 2,6%</a>
+    <a href="https://aijourn.com/latin-america-buy-now-pay-later-business-report-2026-market-to-grow-by-24-8-to-reach-18-5-billion-this-year-investment-opportunities-to-2031-researchandmarkets-com/" target="_blank">ResearchAndMarkets & AI Journal — LatAm BNPL Market 2026 Report</a>
+    <a href="https://www.businesswire.com/news/home/20260226403273/en/Kueski-Appoints-Pablo-Baragiola-Former-Robinhood-Nubank-and-Capital-One-Executive-as-Vice-President-of-Fraud/" target="_blank">BusinessWire — Kueski Appoints Pablo Baragiola as VP of Fraud</a>
+    <a href="https://www.galileo-ft.com/blog/latam-banking-2026-digital-payments-inclusion-convergence/" target="_blank">Galileo Financial Technologies — Why 2026 Will Define LatAm Banking</a>
+    <a href="https://www.auxadi.com/blog/2026/03/17/fintech-regulation-latin-america-opportunities-for-us-companies/" target="_blank">Auxadi — Fintech Regulation in Latin America & Opportunities</a>
+    <a href="https://www.riotimesonline.com/brazil-fintech-2026-complete-guide/" target="_blank">RioTimes — Brazil Fintech in 2026: PIX, Nubank & Open Finance</a>
+    <a href="https://international.nubank.com.br/company/nubank-announces-a-new-hybrid-model-for-2026/" target="_blank">Nubank — Nubank Announces New Hybrid Model for 2026</a>
+    <a href="https://www.latintimes.com/fintech-set-lead-startup-investment-activity-latin-america-2026-report-592862" target="_blank">Latin Times — Fintech Set to Lead Startup Investment Activity in LatAm 2026</a>
+  </div>
+
+</div>
+
+<footer>Analysis prepared with Claude · Prosperas Intelligence Hub · March 23, 2026</footer>
+</body>
+</html>
