@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prosperas Intelligence · Weekly Brief — March 30, 2026</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #f4f6fb;
+      color: #1a2540;
+      line-height: 1.65;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #1967cf 0%, #0d4fa8 100%);
+      color: #fff;
+      padding: 40px 24px 36px;
+      text-align: center;
+    }
+
+    header a.back {
+      display: inline-block;
+      color: rgba(255,255,255,0.80);
+      text-decoration: none;
+      font-size: 0.85rem;
+      margin-bottom: 22px;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    header a.back:hover { color: #fff; }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+    .logo-wrap img {
+      height: 42px;
+      object-fit: contain;
+    }
+
+    .intelligence-label {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700;
+      line-height: 1.25;
+      max-width: 720px;
+      margin: 0 auto 14px;
+    }
+
+    .publish-date {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.04em;
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 800px;
+      margin: 36px auto 60px;
+      padding: 0 20px;
+    }
+
+    .intro {
+      background: #fff;
+      border-left: 4px solid #1967cf;
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin-bottom: 32px;
+      font-size: 0.97rem;
+      color: #374060;
+      box-shadow: 0 2px 8px rgba(25,103,207,0.07);
+    }
+
+    /* ── CARDS ── */
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(25,103,207,0.08);
+      margin-bottom: 24px;
+      overflow: hidden;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 20px 24px 16px;
+      border-bottom: 1px solid #eef1f8;
+    }
+
+    .card-number {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #1967cf;
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-header h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1a2540;
+      line-height: 1.3;
+    }
+
+    .card-tag {
+      margin-left: auto;
+      flex-shrink: 0;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #1967cf;
+      background: #e8f0fd;
+      padding: 3px 10px;
+      border-radius: 12px;
+    }
+
+    .card-body {
+      display: block;
+      padding: 20px 24px 22px;
+    }
+
+    .card-body p {
+      font-size: 0.94rem;
+      color: #374060;
+      margin-bottom: 14px;
+    }
+    .card-body p:last-child { margin-bottom: 0; }
+
+    .card-body strong { color: #1a2540; }
+
+    .stat-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin: 16px 0;
+    }
+
+    .stat-box {
+      flex: 1 1 160px;
+      background: #f0f5ff;
+      border-radius: 8px;
+      padding: 14px 16px;
+      text-align: center;
+    }
+    .stat-box .stat-num {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #1967cf;
+      display: block;
+    }
+    .stat-box .stat-label {
+      font-size: 0.78rem;
+      color: #6278a0;
+      margin-top: 4px;
+      line-height: 1.3;
+    }
+
+    .insight-box {
+      background: #f7f9fe;
+      border-left: 3px solid #1967cf;
+      border-radius: 0 6px 6px 0;
+      padding: 14px 18px;
+      margin-top: 16px;
+      font-size: 0.88rem;
+      color: #374060;
+    }
+    .insight-box strong {
+      color: #1967cf;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #1a2540;
+      color: rgba(255,255,255,0.60);
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+    }
+    footer strong { color: rgba(255,255,255,0.85); }
+
+    @media (max-width: 560px) {
+      .card-tag { display: none; }
+      header h1 { font-size: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="back" href="../index.html">← All editions</a>
+  <div class="logo-wrap">
+    <img src="https://prosperas.com/wp-content/uploads/2026/01/Prosperas-Logo-blanco-e1767895453172.png" alt="Prosperas" />
+  </div>
+  <div class="intelligence-label">Prosperas Intelligence</div>
+  <h1>LatAm Fintech &amp; Credit — Weekly Brief</h1>
+  <div class="publish-date">March 30, 2026</div>
+</header>
+
+<main>
+
+  <div class="intro">
+    This week's brief covers seven high-signal developments for the LatAm fintech and group-credit space: from Chile's landmark open-finance go-live to fresh unicorn news in Mexico, a surging BNPL market, and the persistent — but narrowing — credit gap for women entrepreneurs across the region.
+  </div>
+
+  <!-- 1 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-number">1</div>
+      <h2>Chile's Open Finance System Enters Implementation Phase</h2>
+      <span class="card-tag">Regulation</span>
+    </div>
+    <div class="card-body">
+      <p>Chile's Open Finance System (SFA) — established under Fintech Law 21.521 — has moved into its 24-month technical adaptation period, with mandatory data-sharing obligations for banks and card issuers scheduled to begin in <strong>July 2026</strong>. The Financial Market Commission (CMF) published the governing standard (NCG 514) in mid-2024, triggering the countdown. Insurance companies, fund managers, and savings cooperatives must follow in the subsequent 18 months.</p>
+      <p>The framework requires regulated institutions to share consented customer data across the financial system, enabling fintechs to build credit-scoring, lending, and personal-finance products on top of richer data pipelines. This positions Chile as the first Pacific Alliance country to operationalize a full open-finance mandate — placing pressure on <strong>Peru</strong>, which remains the only Alliance member without binding legislation, and on Colombia, which is still completing the phased rollout of its own draft decree.</p>
+      <div class="insight-box"><strong>Prosperas angle:</strong> Open finance frameworks create pathways for alternative credit models — including group lending — to access verified income and transaction histories for previously invisible borrowers, improving underwriting precision and lowering default risk.</div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-number">2</div>
+      <h2>Kapital Achieves Unicorn Status With $100M Series C</h2>
+      <span class="card-tag">Funding</span>
+    </div>
+    <div class="card-body">
+      <p>Kapital, the Mexico City-based neobank serving SMEs, has raised <strong>$100 million in a Series C</strong> round, doubling its valuation to <strong>$1.3 billion</strong> and cementing its status as one of Mexico's newest unicorns. The raise underscores sustained investor conviction in the Mexican SME-finance segment, even as global venture activity remains selective.</p>
+      <p>Kapital combines a business bank account with embedded credit decisioning, leveraging cash-flow data to extend loans to businesses that traditional banks typically decline. The company's model — automated underwriting against real-time transaction data — mirrors the direction that digitally native microlenders are pursuing at the base of the pyramid.</p>
+      <div class="stat-row">
+        <div class="stat-box">
+          <span class="stat-num">$1.3B</span>
+          <span class="stat-label">Kapital post-money valuation</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">$100M</span>
+          <span class="stat-label">Series C raised</span>
+        </div>
+      </div>
+      <p>Separately, <strong>Plata</strong> — a consumer credit card startup — is in advanced discussions to raise fresh capital at a reported <strong>$3.3 billion valuation</strong>, more than double its $1.5 billion March 2025 Series A. The pace of Mexico's fintech valuation appreciation reflects both the depth of unmet credit demand and the country's position as LatAm's most active investment market in H1 2025.</p>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-number">3</div>
+      <h2>BNPL Crosses Into Physical Retail as LatAm Market Targets $18.5B</h2>
+      <span class="card-tag">BNPL</span>
+    </div>
+    <div class="card-body">
+      <p>Latin America's Buy Now, Pay Later market is forecast to reach <strong>$18.5 billion in 2026</strong>, representing 24.8% annual growth, according to a GlobalNewswire industry report released in January. The acceleration is being driven by a structural shift: BNPL providers are moving aggressively beyond e-commerce into <strong>physical retail</strong>.</p>
+      <p><strong>Kueski Pay</strong>, Mexico's leading BNPL platform, has expanded its QR-based in-store payment network to pharmacies, electronics chains, and convenience-store formats — bringing instalment financing to everyday purchase categories where cash and informal credit have historically dominated. This move is significant because it targets the same consumer segment — lower-income urban women — that group-lending fintechs serve.</p>
+      <p>Regulators in Brazil and Colombia are updating digital-credit frameworks in response, moving toward consumer-protection standards that bring BNPL closer to traditional instalment lending. Colombia has expanded its regulatory sandbox to accommodate new digital credit models, including instalment-at-checkout products.</p>
+      <div class="insight-box"><strong>Prosperas angle:</strong> As BNPL penetrates physical retail for everyday goods, it increasingly overlaps with the credit use-cases of group-lending clients — inventory purchases, household appliances, business inputs. Group lenders that integrate or partner with BNPL rails could offer members seamless credit at point-of-sale.</div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-number">4</div>
+      <h2>Women Entrepreneurs Face a Persistent — But Narrowing — Credit Gap</h2>
+      <span class="card-tag">Financial Inclusion</span>
+    </div>
+    <div class="card-body">
+      <p>A recurring finding from IDB Invest and Tec de Monterrey research continues to frame the market opportunity: <strong>73% of women entrepreneurs in Latin America cannot access financing from formal financial institutions</strong>. The "missing middle" — businesses too large for microfinance but too informal for commercial banking — remains disproportionately female.</p>
+      <p>The latest <strong>Finnovista Fintech Radar Mexico 2026</strong> offers a more optimistic signal: 34.5% of Mexican fintechs now operate products explicitly designed for underserved segments, up from prior cycles. The radar also identified a "Leadership Effect": firms where women hold more than 50% of leadership positions are <strong>twice as likely</strong> to develop inclusive financial products.</p>
+      <div class="stat-row">
+        <div class="stat-box">
+          <span class="stat-num">73%</span>
+          <span class="stat-label">Women entrepreneurs without formal credit access in LatAm</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">34.5%</span>
+          <span class="stat-label">Mexican fintechs with products for underserved segments (2026)</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">2×</span>
+          <span class="stat-label">Likelihood of inclusive products with majority-women leadership</span>
+        </div>
+      </div>
+      <p>Morado (Colombia) and Tappoyo (Mexico/Peru/Colombia/Ecuador) are among the platforms gaining traction by pairing group-lending mechanics with mobile-first onboarding, serving women who operate outside the formal economy but have strong community trust networks as collateral substitutes.</p>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-number">5</div>
+      <h2>Colombia Advances Mandatory Open Finance Rollout</h2>
+      <span class="card-tag">Regulation</span>
+    </div>
+    <div class="card-body">
+      <p>Colombia's Superintendencia Financiera is advancing the country's Open Finance transition from a voluntary model to a <strong>mandatory, regulated ecosystem</strong>. The draft decree published in June 2025 establishes the legal architecture for a full Open Finance System, centered on Account Information Services (AIS) and a phased rollout culminating in <strong>full financial portability in Phase 4 (2026)</strong> — meaning consumers will be able to transfer all product data across institutions seamlessly.</p>
+      <p>Colombia's fintech ecosystem is the third-largest in LatAm, with <strong>lending as its dominant segment</strong> (115 companies), followed by payments and remittances (66). The country's usury rate ceiling continues to constrain margin room for smaller digital lenders, but the regulatory sandbox expansion signals a willingness to allow experimentation in group and community credit models.</p>
+      <div class="insight-box"><strong>Prosperas angle:</strong> Colombia's open finance architecture — once fully live — will enable lenders to access real-time cash-flow data for informal-sector borrowers with no credit bureau history, directly supporting group-lending models that currently rely on peer guarantees as the primary risk mitigation tool.</div>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-number">6</div>
+      <h2>LatAm Fintech Investment Revival: Mexico Leads 2026 Momentum</h2>
+      <span class="card-tag">Investment</span>
+    </div>
+    <div class="card-body">
+      <p>Venture capital activity in Latin America is rebounding sharply in 2026 after a two-year correction, with fintech leading the charge. Mexico briefly surpassed Brazil as the top LatAm fundraising market in Q2 2025, a historic milestone driven by outsized rounds in digital banking and consumer credit.</p>
+      <p>Albo, a Mexico-based consumer neobank, closed a <strong>$40 million growth round</strong> — the latest in a string of funding events that have refreshed the Mexican digital banking landscape. Analysts at Crunchbase note that the three largest LatAm startup rounds of 2025 were all Mexico-headquartered, a trend expected to continue into mid-2026 as institutional LPs increase regional allocations.</p>
+      <p>The broader signal: investor confidence in Mexico's credit infrastructure — regulatory clarity, large underbanked population, maturing digital payment rails — has not wavered despite macroeconomic headwinds. For group lenders operating in Mexico, this environment means greater access to debt capital and strategic partnership opportunities with better-capitalized neobanks.</p>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-number">7</div>
+      <h2>Digital Technology Is Modernizing Group Lending at Scale</h2>
+      <span class="card-tag">Group Lending</span>
+    </div>
+    <div class="card-body">
+      <p>The group-lending model — pioneered by Grameen Bank and deeply embedded in Mexico through products like Compartamos' <em>Crédito Mujer</em> (which serves groups of 10–50 women) — is undergoing a technology upgrade across the region. Platforms like <strong>Tappoyo</strong> are replacing paper-based field processes with mobile-first workflows, using community solidarity dynamics as the core risk mechanism while adding real-time loan management, digital disbursement, and behavioral analytics.</p>
+      <p>The model's resilience is documented: Mexico's group lending segment maintains strong repayment rates due to the social accountability structure, where group members guarantee each other's loans. Digital tools amplify this by enabling faster loan cycles, reducing agent operating costs, and extending coverage to smaller towns that field-agent models struggle to serve economically.</p>
+      <p>Women's World Banking research highlights that <strong>deepening financial inclusion for microentrepreneurs in Mexico requires individual product design</strong> — not just group mechanics — as borrower income and business sophistication grow. Leading group lenders are responding by building graduation pathways: clients who build credit history through group cycles become eligible for higher-value individual loans.</p>
+      <div class="insight-box"><strong>Prosperas angle:</strong> This graduation model is central to Prosperas' value proposition — building a credit identity for women entrepreneurs who are invisible to traditional scoring systems, then leveraging that identity to unlock larger, more flexible capital as their businesses grow.</div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <strong>Prosperas Intelligence · Weekly Brief</strong><br/>
+  Published March 30, 2026 &nbsp;·&nbsp; For internal strategic use
+</footer>
+
+</body>
+</html>
